@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
 
 // colors
-$grayish-blue: hsl(217, 19%, 35%);
+$dark-grayish-blue: hsl(217, 19%, 35%);
 $dark-blue: hsl(214, 17%, 51%);
 $grayish-blue: hsl(212, 23%, 69%);
 $light-grayish-blue: hsl(210, 46%, 95%);
@@ -15,6 +15,61 @@ $white: white;
 }
 .article{
     font-family: "Manrope", sans-serif;
-    margin: 3.5rem 1.3rem;
+    margin: 5.5rem 2rem;
     background-color: $white;
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem $grayish-blue;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+
+    &__heading-image{
+        border-radius: 1rem 1rem 0 0;
+    }
+    &_inner{
+        padding: 0 4rem;
+    }
+    &__title{
+        margin-top: 2rem;
+        line-height: 1.5;
+        font-weight: bold;
+        color: $dark-grayish-blue;
+    }
+    &__message{
+        color: $grayish-blue;
+
+    }
+    &__selfie{
+        border-radius: 50%;
+        height: 4rem;
+        float: left;
+        margin-right: 1rem;
+    }
+    &--small-image{
+    }
+    &__footer{
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+    }
+    &__author_name{
+        margin: 0;
+        color: $dark-grayish-blue;
+
+    }
+    &__publish_date{
+        margin: 0;
+        color: $grayish-blue;
+    }
+    &__share{
+        border-radius: 50%;
+        padding: .8rem;
+        background-color: $light-grayish-blue;
+        border: none;
+    }
 }
