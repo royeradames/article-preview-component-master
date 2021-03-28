@@ -18,7 +18,7 @@ $white: white;
     margin: 5.5rem 2rem;
     background-color: $white;
     border-radius: 1rem;
-    box-shadow: 0 0 .5rem $grayish-blue;
+    box-shadow: 0 .01rem .5rem $grayish-blue;
     font-size: 1.3rem;
     font-weight: 500;
     padding-bottom: 1.5rem;
@@ -44,8 +44,6 @@ $white: white;
         height: 4rem;
         float: left;
         margin-right: 1rem;
-    }
-    &--small-image{
     }
     &__footer{
         display: flex;
