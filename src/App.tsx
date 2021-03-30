@@ -19,17 +19,15 @@ function App() {
             className="article__heading-image"
           />
 
-          <div className="article_inner">
-            <h2 className="article__title">
-              Shift the overall look and feel by adding these wonderful touches
-              to furniture in your home
-            </h2>
-            <p className="article__message">
-              Ever been in a room and felt like something was missing? Perhaps
-              it felt slightly bare and uninviting. I’ve got some simple tips to
-              help you make any room feel complete.
-            </p>
-          </div>
+          <h2 className="article__title">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h2>
+          <p className="article__message">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
 
           <footer className="article__footer">
             <div className="article__share-section display-none">

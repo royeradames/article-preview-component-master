@@ -17,7 +17,6 @@ $white: white;
     
     // center the grid
     display: grid;
-    grid-column: max-content;
     justify-content: center;
     align-content: center;
 }
@@ -29,22 +28,30 @@ $white: white;
     box-shadow: 0 .01rem .5rem $grayish-blue;
     font-size: 1.3rem;
     font-weight: 500;
-    // padding-bottom: 1.5rem;
 
+    display: grid;
+    grid-template-columns: 4rem 1fr 4rem;
+    // grid-template-rows: 1fr max-content max-content max-content;
+    grid-template-areas: "header header header"
+                          ". title ."
+                          ". message ."
+                          "footer footer footer"
+    ;
     &__heading-image{
         border-radius: 1rem 1rem 0 0;
-    }
-    &_inner{
-        padding: 0 4rem;
+        grid-area: header;
+
     }
     &__title{
         margin-top: 2rem;
         line-height: 1.5;
         font-weight: bold;
         color: $dark-grayish-blue;
+        grid-area: title;
     }
     &__message{
         color: $grayish-blue;
+        grid-area: message;
 
     }
     &__selfie{
@@ -62,6 +69,8 @@ $white: white;
         padding-bottom: 1rem;
         padding-top: 1rem;
         border-radius: 0 0 1rem 1rem;
+        grid-area: footer;
+
     }
     &__author{
         padding:  0 4rem;
