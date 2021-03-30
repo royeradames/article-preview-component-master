@@ -10,12 +10,20 @@ $white: white;
 
 // mobile styles
 .page{
-    background-color: $light-grayish-blue;
+    // let the page be at least the full width of what the user first sees
+    min-height: 100vh;
 
+    background-color: $light-grayish-blue;
+    
+    // center the grid
+    display: grid;
+    grid-column: max-content;
+    justify-content: center;
+    align-content: center;
 }
 .article{
     font-family: "Manrope", sans-serif;
-    margin: 5.5rem 2rem;
+    margin: 0rem 2rem;
     background-color: $white;
     border-radius: 1rem;
     box-shadow: 0 .01rem .5rem $grayish-blue;
