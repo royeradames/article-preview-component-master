@@ -21,7 +21,7 @@ $white: white;
     box-shadow: 0 .01rem .5rem $grayish-blue;
     font-size: 1.3rem;
     font-weight: 500;
-    padding-bottom: 1.5rem;
+    // padding-bottom: 1.5rem;
 
     &__heading-image{
         border-radius: 1rem 1rem 0 0;
@@ -50,6 +50,15 @@ $white: white;
         align-content: center;
         justify-content: space-between;
         align-items: center;
+        background-color: $dark-blue;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        border-radius: 0 0 1rem 1rem;
+    }
+    &__author{
+        padding:  0 4rem;
+        display: none;
+
     }
     &__info{
         display: flex;
@@ -64,10 +73,36 @@ $white: white;
         margin: 0;
         color: $grayish-blue;
     }
-    &__share{
+    &__share-button{
         border-radius: 50%;
         padding: .8rem;
         background-color: $light-grayish-blue;
         border: none;
+        z-index: 2;
+        margin-right: 4rem;
+
+        
     }
+    &__share-section{
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        padding-left: 4rem;
+        align-items: center;
+        min-width: 20rem;
+        &--background{
+            background-color: $dark-blue;
+
+        }
+    }
+    &__share-title{
+        color: $grayish-blue;
+        letter-spacing: 0.491rem;
+        font-weight: normal;
+    }
+    
+}
+
+.display-none {
+    // display: none;
 }
