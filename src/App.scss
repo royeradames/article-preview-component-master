@@ -188,7 +188,7 @@ $white: white;
 @media (min-width: 710px){
     .article{
         // desktop layout
-        grid-template-columns: 1fr 4rem 1fr min-content 4rem;
+        grid-template-columns: 2fr 4rem 3fr min-content 4rem;
         grid-template-rows: max-content max-content max-content;
         grid-template-areas: 
             "header . title titile ."
