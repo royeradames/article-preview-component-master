@@ -20,6 +20,16 @@ function App() {
     <>
       <main className="page">
         <article className="article">
+          {/* <img
+            className="article__heading-image"
+            src={drawersMobile}
+            alt=" Drawers"
+          /> */}
+          {/* <img
+            className="article__heading-image"
+            src={drawersDesktop}
+            alt=" Drawers"
+          /> */}
           <picture className="article__heading-image">
             <source media="(min-width:710px)" srcSet={drawersDesktop} />
             <img src={drawersMobile} alt=" Drawers" />
