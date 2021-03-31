@@ -46,13 +46,14 @@ $white: white;
 
     }
     &__title{
-        margin-top: 2rem;
+        margin: 0rem;
         line-height: 1.5;
         font-weight: bold;
         color: $dark-grayish-blue;
         grid-area: title;
     }
     &__message{
+        margin: 0rem;
         color: $grayish-blue;
         grid-area: message;
 
@@ -183,24 +184,23 @@ $white: white;
 @media (min-width: 710px){
     .article{
         // desktop layout
-        grid-template-columns: 1fr 4rem 1fr 4rem;
-        // grid-template-rows: 1fr max-content max-content max-content;
+        grid-template-columns: 1fr 4rem 1fr min-content 4rem;
+        grid-auto-rows: minmax(2rem, auto);
         grid-template-areas: 
-            "header . title ."
-            "header . message ."
-            "header footer footer footer"
+            "header . . . ."
+            "header . title titile ."
+            "header . message message ."
+            "header . content button ."
+            "header . . . ."
+
         ;
         max-width: 71rem;
-
-        // layout the footer overlay content
-        // display: grid;
-        // grid-template-columns: 4rem repeat(3, 1fr) 4rem;
-        // grid-template-areas: 
-        //     " .  content content button . "
-        //     ;
-        // justify-content: start;
+        row-gap: 2rem;
+        
         &__heading-image{
             border-radius: 1rem 0 0 1rem;
+            justify-self: stretch;
+            align-self: stretch;
         }
         &__footer{
             &--share-actived{
@@ -208,10 +208,22 @@ $white: white;
             }
         }
         &__author{
-        &--share-actived{
-            z-index: 1;
+            &--share-actived{
+                z-index: 1;
+            }
         }
-    }
+        &__share-section{
+            background-color: $dark-grayish-blue;
+            padding: 0rem 1rem;
+            border-radius: 1rem;
+            position: relative;
+            &--active{
+                top: -5rem;
+                right: -21rem;
+                justify-content: space-around;
+                max-width: 20rem;
+            }
+        }
 
     }
 
