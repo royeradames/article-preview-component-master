@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import drawers from "./images/drawers.jpg";
 import authorImage from "./images/avatar-michelle.jpg";
@@ -8,7 +8,13 @@ import facebookIcon from "./images/icon-facebook.svg";
 import pinterestIcon from "./images/icon-pinterest.svg";
 
 function App() {
-  const share = () => {};
+  const [isShare, setIsShare] = useState(false);
+  const share = (
+    isShare: boolean,
+    setIsShare: React.Dispatch<React.SetStateAction<boolean>>
+  ) => {
+    setIsShare(!isShare);
+  };
   return (
     <>
       <main className="page">
@@ -29,40 +35,57 @@ function App() {
             you make any room feel complete.
           </p>
 
-          <footer className="article__footer">
-            <div className="article__share-section display-none">
+          <footer
+            className={`article__footer ${
+              isShare ? "article__footer--share-actived" : ""
+            }`}
+          >
+            <div
+              className={`article__share-section ${
+                isShare ? "article__share-section--active" : ""
+              }`}
+            >
               <h2 className="article__share-title">SHARE</h2>
               <img
                 src={facebookIcon}
                 alt=" facebook icon"
-                className="article__facebook-icon"
+                className="article__icon"
               />
               <img
                 src={twitterIcon}
                 alt="twitter icon"
-                className="article__facebook-icon"
+                className="article__icon"
               />
               <img
                 src={pinterestIcon}
                 alt="pinterest icon"
-                className="article__pinterest"
+                className="article__icon"
               />
             </div>
-            <div className="article__author">
+            <div
+              className={`article__author ${
+                isShare ? "article__author--share-actived" : ""
+              }`}
+            >
               <img
                 className="article__selfie"
                 src={authorImage}
                 alt="Selfie of Michelle Appleton"
               />
-              <div className="article__info">
-                <h3 className="article__author_name">Michelle Appleton</h3>
-                <p className="article__publish_date">28 Jun 2020</p>
-              </div>
+              <h3 className="article__author_name">Michelle Appleton</h3>
+              <p className="article__publish_date">28 Jun 2020</p>
             </div>
-            <button onClick={() => share()} className="article__share-button">
+            <button
+              onClick={() => share(isShare, setIsShare)}
+              className={`article__share-button ${
+                isShare ? "article__share-button--active" : ""
+              }`}
+            >
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
                 <path
-                  className="test"
+                  className={`${
+                    isShare ? "article__share-button--active" : ""
+                  }`}
                   fill="#6E8098"
                   d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
                 />
