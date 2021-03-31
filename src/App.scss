@@ -223,6 +223,18 @@ $white: white;
                 justify-content: space-around;
                 max-width: 20rem;
             }
+            &-pointing-square{
+                position: absolute;
+                top: 2rem;
+                height: 4rem;
+                right: 8.3rem;
+            }
+        }
+        &__icon{
+            height: 1.6rem;
+        }
+        &__share-title{
+            font-size: 1rem;
         }
 
     }
