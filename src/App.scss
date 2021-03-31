@@ -32,14 +32,16 @@ $white: white;
     font-weight: 500;
 
     display: grid;
-    grid-template-columns: 4rem 1fr 4rem;
-    // grid-template-rows: 1fr max-content max-content max-content;
+    grid-template-columns: 4rem 1fr min-content 4rem;
     grid-template-areas: 
-        "header header header"
-        ". title ."
-        ". message ."
-        "footer footer footer"
+        "header header header header"
+        " . . . ."
+        " . title titile ."
+        " . message message ."
+        " footer footer footer footer"
+        " . . . ."
     ;
+    row-gap: 2rem;
     &__heading-image{
         border-radius: 1rem 1rem 0 0;
         grid-area: header;
@@ -163,6 +165,9 @@ $white: white;
             background-color: $dark-blue;
 
         }
+        &-pointing-square{
+            display: none;
+        }
     }
     &__share-title{
         color: $grayish-blue;
@@ -190,7 +195,7 @@ $white: white;
             "header . . . ."
             "header . title titile ."
             "header . message message ."
-            "header . content button ."
+            "header footer footer footer footer"
             "header . . . ."
 
         ;
@@ -219,11 +224,12 @@ $white: white;
             position: relative;
             &--active{
                 top: -5rem;
-                right: -21rem;
+                right: -19.3rem;
                 justify-content: space-around;
                 max-width: 20rem;
             }
             &-pointing-square{
+                display: initial;
                 position: absolute;
                 top: 2rem;
                 height: 4rem;

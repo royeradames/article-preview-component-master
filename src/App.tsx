@@ -34,70 +34,78 @@ function App() {
             you make any room feel complete.
           </p>
 
-          <div
-            className={`article__share-section ${
-              isShare ? "article__share-section--active" : ""
+          <footer
+            className={`article__footer ${
+              isShare ? "article__footer--share-actived" : ""
             }`}
           >
-            <h2 className="article__share-title">SHARE</h2>
-            <img
-              src={facebookIcon}
-              alt=" facebook icon"
-              className="article__icon"
-            />
-            <img
-              src={twitterIcon}
-              alt="twitter icon"
-              className="article__icon"
-            />
-            <img
-              src={pinterestIcon}
-              alt="pinterest icon"
-              className="article__icon"
-            />
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="caret-down"
-              className="svg-inline--fa fa-caret-down fa-w-10 article__share-section-pointing-square"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 320 512"
+            <div
+              className={`article__share-section ${
+                isShare ? "article__share-section--active" : ""
+              }`}
             >
-              <path
-                fill="hsl(217, 19%, 35%)"
-                d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-              ></path>
-            </svg>
-          </div>
-          <div
-            className={`article__author ${
-              isShare ? "article__author--share-actived" : ""
-            }`}
-          >
-            <img
-              className="article__selfie"
-              src={authorImage}
-              alt="Selfie of Michelle Appleton"
-            />
-            <h3 className="article__author_name">Michelle Appleton</h3>
-            <p className="article__publish_date">28 Jun 2020</p>
-          </div>
-          <button
-            onClick={() => share(isShare, setIsShare)}
-            className={`article__share-button ${
-              isShare ? "article__share-button--active" : ""
-            }`}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
-              <path
-                className={`${isShare ? "article__share-button--active" : ""}`}
-                fill="#6E8098"
-                d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+              <h2 className="article__share-title">SHARE</h2>
+              <img
+                src={facebookIcon}
+                alt=" facebook icon"
+                className="article__icon"
               />
-            </svg>
-          </button>
+              <img
+                src={twitterIcon}
+                alt="twitter icon"
+                className="article__icon"
+              />
+              <img
+                src={pinterestIcon}
+                alt="pinterest icon"
+                className="article__icon"
+              />
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="caret-down"
+                className="svg-inline--fa fa-caret-down fa-w-10 article__share-section-pointing-square"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="hsl(217, 19%, 35%)"
+                  d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                ></path>
+              </svg>
+            </div>
+            <div
+              className={`article__author ${
+                isShare ? "article__author--share-actived" : ""
+              }`}
+            >
+              <img
+                className="article__selfie"
+                src={authorImage}
+                alt="Selfie of Michelle Appleton"
+              />
+              <h3 className="article__author_name">Michelle Appleton</h3>
+              <p className="article__publish_date">28 Jun 2020</p>
+            </div>
+            <button
+              onClick={() => share(isShare, setIsShare)}
+              className={`article__share-button ${
+                isShare ? "article__share-button--active" : ""
+              }`}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                <path
+                  className={`${
+                    isShare ? "article__share-button--active" : ""
+                  }`}
+                  fill="#6E8098"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                />
+              </svg>
+            </button>
+          </footer>
         </article>
       </main>
     </>
