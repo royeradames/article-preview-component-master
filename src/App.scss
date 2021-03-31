@@ -21,6 +21,8 @@ $white: white;
     align-content: center;
 }
 .article{
+    max-width: 37rem;
+    min-width: 30rem;
     font-family: "Manrope", sans-serif;
     margin: 0rem 2rem;
     background-color: $white;
@@ -88,8 +90,8 @@ $white: white;
         grid-area: content;
 
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: max-content 1fr;
         grid-template-areas: 
             "selfie name"
             "selfie date"
@@ -169,7 +171,48 @@ $white: white;
     &__icon{
         &:hover{
             cursor: pointer;
+            box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.226);
+
         }
     }
     
+}
+
+// desktop design
+// mobile the image to the left side 
+@media (min-width: 710px){
+    .article{
+        // desktop layout
+        grid-template-columns: 1fr 4rem 1fr 4rem;
+        // grid-template-rows: 1fr max-content max-content max-content;
+        grid-template-areas: 
+            "header . title ."
+            "header . message ."
+            "header footer footer footer"
+        ;
+        max-width: 71rem;
+
+        // layout the footer overlay content
+        // display: grid;
+        // grid-template-columns: 4rem repeat(3, 1fr) 4rem;
+        // grid-template-areas: 
+        //     " .  content content button . "
+        //     ;
+        // justify-content: start;
+        &__heading-image{
+            border-radius: 1rem 0 0 1rem;
+        }
+        &__footer{
+            &--share-actived{
+                background-color: initial;
+            }
+        }
+        &__author{
+        &--share-actived{
+            z-index: 1;
+        }
+    }
+
+    }
+
 }
