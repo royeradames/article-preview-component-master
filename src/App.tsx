@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./App.scss";
-import drawers from "./images/drawers.jpg";
+import drawersMobile from "./images/drawers.jpg";
+import drawersDesktop from "./images/drawersDesktop.jpg";
+
 import authorImage from "./images/avatar-michelle.jpg";
 import twitterIcon from "./images/icon-twitter.svg";
 import facebookIcon from "./images/icon-facebook.svg";
@@ -18,11 +20,10 @@ function App() {
     <>
       <main className="page">
         <article className="article">
-          <img
-            src={drawers}
-            alt=" Drawers"
-            className="article__heading-image"
-          />
+          <picture className="article__heading-image">
+            <source media="(min-width:710px)" srcSet={drawersDesktop} />
+            <img src={drawersMobile} alt=" Drawers" />
+          </picture>
 
           <h2 className="article__title">
             Shift the overall look and feel by adding these wonderful touches to
